@@ -19,7 +19,7 @@ vals = []
 folders_ = []
 dirs = {}
 
-with open('keepass.csv', encoding='utf-8', newline='\n') as csvfile:
+with open(csvFileSource, encoding='utf-8', newline='\n') as csvfile:
     csvReader = csv.DictReader(csvfile, delimiter=',', quotechar=' ')
     for value in csvReader:
         path = rm_quotes(value["\"Group\""]).split("/")
